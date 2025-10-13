@@ -5,7 +5,8 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-
+#include <limits>
+#include "comptebancaire.h"
 using namespace std;
 
 class Menu
@@ -13,7 +14,7 @@ class Menu
 public:
     Menu(const std::string &_nom);
     ~Menu();
-    int Afficher();
+    int AfficherEtRecupererReponse();
     static void AttendreAppuiTouche();
 
 private:

@@ -72,13 +72,13 @@ Menu::~Menu()
 }
 
 /**
- * @brief Menu::Afficher
+ * @brief Menu::AfficherEtRecupererReponse
  *        Méthode pour créer la vue utilisateur du menu.
  *        Cette méthode attend la saisie du choix de l'utilisateur
  * @return Le choix de l'utilisateur sous la forme d'une valeur entière
  */
 
-int Menu::Afficher()
+int Menu::AfficherEtRecupererReponse()
 {
     int choix;
     // si le fichier ne peut pas être ouvert alors pas d'affichage;
