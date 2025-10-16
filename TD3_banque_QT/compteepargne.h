@@ -12,7 +12,7 @@ public:
     CompteEpargne(const CompteEpargne &_d);
 
     float CalculerInterets();
-    void ModifierTaux(float newTauxInterets);
+    void ModifierTaux(float _montant);
 };
 
 #endif // COMPTEEPARGNE_H

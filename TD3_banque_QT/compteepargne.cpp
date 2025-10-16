@@ -23,7 +23,11 @@ float CompteEpargne::CalculerInterets()
     return solde*tauxInterets;
 }
 
-void CompteEpargne::ModifierTaux(float newTauxInterets)
+void CompteEpargne::ModifierTaux(float _montant)
 {
-    tauxInterets = newTauxInterets;
+    if (_montant>0){
+        _montant=_montant/100;
+        tauxInterets = _montant;
+    }
+
 }
