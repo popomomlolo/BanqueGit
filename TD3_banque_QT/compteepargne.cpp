@@ -20,14 +20,18 @@ CompteEpargne::CompteEpargne(const CompteEpargne &_d)
 
 float CompteEpargne::CalculerInterets()
 {
-    return solde*tauxInterets;
+    return solde*(tauxInterets/100);
 }
 
 void CompteEpargne::ModifierTaux(float _montant)
 {
     if (_montant>0){
-        _montant=_montant/100;
         tauxInterets = _montant;
     }
 
+}
+
+CompteEpargne::~CompteEpargne()
+{
+    cout<<"destructeur epargne"<<endl;
 }

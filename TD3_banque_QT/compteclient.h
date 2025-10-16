@@ -5,6 +5,7 @@
 #include <iostream>
 #include "compteepargne.h"
 #include "comptebancaire.h"
+#include "menu.h"
 using namespace std;
 
 class CompteClient
@@ -15,7 +16,7 @@ private:
     string nom;
     int numero;
 public:
-    CompteClient(CompteEpargne compteEpargne=nullptr,CompteBancaire compteBancaire=0,string _nom,int _numero);
+    CompteClient(string _nom,int _numero);
     ~CompteClient();
 
     void OuvrirCompteEpargne();

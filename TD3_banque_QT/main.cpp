@@ -1,43 +1,26 @@
-#include <iostream>
-#include "menu.h"
-#include "comptebancaire.h"
-#include "compteepargne.h"
-using namespace std;
-
+#include "compteclient.h"
 int main()
 {
 
-    Menu m("compteEpargne.txt");
-    CompteEpargne c;
-    int reponse,var;
+    Menu m("client.txt");
+    CompteClient c("Albert",1);
+    int reponse;
     do {
     reponse=m.AfficherEtRecupererReponse();
     switch(reponse){
     case 1:
-        cout<<"solde : "<<c.consulterSolde()<<endl;;
+        c.OuvrirCompteEpargne();
         break;
     case 2:
-        cout<<"cb voulez vous deposer ? :"<<endl;
-        cin>>var;
-        c.deposer(var);
-        cout<<"solde : "<<c.consulterSolde()<<endl;;
+        c.GererCompteBancaire();
         break;
     case 3:
-        cout<<"cb voulez vous retirer ? :"<<endl;
-        cin>>var;
-        if (!c.retirer(var)){
-            cout<<"ne peux pas retier"<<endl;
-        }
-        cout<<"solde : "<<c.consulterSolde()<<endl;;
+        c.GererCompteEpargne();
         break;
     case 4:
-        cout<<c.CalculerInterets()<<endl;
-        break;
-
-    case 5:
         cout<<"quitter le menu"<<endl;
         break;
     }
-    }while(reponse!=5);
+    }while(reponse!=4);
     return 0;
 }
